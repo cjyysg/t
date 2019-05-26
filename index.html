@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>魔方</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style type="text/css">
+			body{
+				perspective: 1000px;
+			}
+			
+			.bigdiv{
+				width: 300px;
+				height: 500px;
+				margin: 500px auto;
+				transform-style: preserve-3d;
+				position: relative;
+				
+				animation: donghua 4s infinite alternate linear;
+			}
+			@keyframes donghua{
+				from{
+					transform: rotate3d(1,1,0,0deg);
+				}
+				to{
+					transform: rotate3d(1,1,0,720deg);
+				}
+			}
+			.min{
+				width: 300px;
+				height: 500px;
+				/*margin: 400px auto;*/
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				opacity: 0.6;
+				transition: all 3s;
+				background-position: center;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			.miin{
+				width: 300px;
+				height: 300px;
+				/*margin: 400px auto;*/
+				position: absolute;
+				left: 0px;
+				top: 0px;
+				opacity: 0.6;
+				transition: all 2s;
+				background-position: center;
+				background-size: 100% 100%;
+				background-repeat: no-repeat;
+			}
+			.front{
+				background-image: url(img/front.jpeg);
+				transform: translateZ(150px);
+			}
+			.bigdiv:hover .front{
+				transform: translateZ(350px);
+			}
+			
+			.back{
+				background-image: url(img/back.jpeg);
+				transform: translateZ(-150PX);
+			}
+			.bigdiv:hover .back{
+				transform: translateZ(-450PX);
+			}
+			
+			.left{
+				background-image: url(img/left.jpg);
+				transform: rotateY(-90deg) translateZ(150px);
+			}
+			.bigdiv:hover .left{
+				transform: rotateY(-90deg) translateZ(450px);
+			}
+			
+			.right{
+				background-image: url(img/right.jpeg);
+				transform: rotateY(90deg) translateZ(150px);
+				
+			}
+			.bigdiv:hover .right{
+				transform: rotateY(90deg) translateZ(450px);
+			}
+			
+			.top{
+				background-image: url(img/top.jpeg);
+				transform: rotateX(90deg) translateZ(150px);
+			
+			}
+			.bigdiv:hover .top{
+				transform: rotateX(90deg) translateZ(450px);
+			}
+			
+			.bottom{
+				background-image: url(img/bottom.jpeg);
+				
+				transform: rotateX(-90deg) translateZ(350px);
+				
+			}
+			.bigdiv:hover .bottom{
+				transform: rotateX(-90deg) translateZ(650px);
+			}
+			
+			
+			
+			.frontt{
+				background-image: url(img/front.jpeg);
+				transform: translateZ(150px);
+			}
+		
+			
+			.backk{
+				background-image: url(img/back.jpeg);
+				transform: translateZ(-150PX);
+			}
+			
+			
+			.leftt{
+				background-image: url(img/left.jpg);
+				transform: rotateY(-90deg) translateZ(150px);
+			}
+			
+			.rightt{
+				background-image: url(img/right.jpeg);
+				transform: rotateY(90deg) translateZ(150px);
+				
+			}
+			
+			
+			.topp{
+				background-image: url(img/top.jpeg);
+				transform: rotateX(90deg) translateZ(150px);
+			
+			}
+			
+			.bottomm{
+				background-image: url(img/bottom.jpeg);
+				
+				transform: rotateX(-90deg) translateZ(350px);
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="bigdiv">
+			<div class="miin top"></div>
+			<div class="miin bottom"></div>
+			<div class="min left"></div>
+			<div class="min right"></div>
+			<div class="min back"></div>
+			<div class="min front"></div>
+			<div class="miin topp"></div>
+			<div class="miin bottomm"></div>
+			<div class="min leftt"></div>
+			<div class="min rightt"></div>
+			<div class="min backk"></div>
+			<div class="min frontt"></div>
+		</div>
+		
+	</body>
+</html>
